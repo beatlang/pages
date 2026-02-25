@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Datenschutzerklärung – Perfetto Bike Fit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; line-height: 1.6; padding: 1em; max-width: 800px; margin: 0 auto; }
+    h1, h2, h3 { color: #333; }
+    code { background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Datenschutzerklärung für die App "Perfetto Bike Fit"</h1>
+  <p>Stand: 25. Februar 2026</p>
+
+  <p>Der Schutz Ihrer Privatsphäre bei der Nutzung unserer App "Perfetto Bike Fit" ist uns ein besonders wichtiges Anliegen. Nachfolgend informieren wir Sie ausführlich über den Umgang mit Ihren Daten.</p>
+
+  <h2>1. Verantwortlicher</h2>
+  <p>
+    Beat Lang<br>
+    Kontakt: support@avelanx.com
+  </p>
+  <p>Diese Person ist verantwortlich für die Datenverarbeitung im Zusammenhang mit dieser App.</p>
+
+  <h2>2. Grundsatz: Keine Erhebung personenbezogener Daten</h2>
+  <p>
+    <strong>Die App "Perfetto Bike Fit" wurde nach dem Grundsatz der Datensparsamkeit ("Privacy by Design") entwickelt.</strong>
+    Wir erheben, verarbeiten oder speichern grundsätzlich keine personenbezogenen Daten. Sie können die App vollständig anonym nutzen. Es gibt keine Benutzerkonten, keine Anmeldeformulare und keine Übermittlung von persönlichen Informationen an uns oder Dritte.
+  </p>
+
+  <h2>3. Detaillierte Beschreibung der Funktionsweise und Datenverarbeitung</h2>
+  <p>Die App nutzt moderne Technologien direkt auf Ihrem Gerät, um eine biomechanische Analyse Ihrer Sitzposition auf dem Fahrrad durchzuführen. Alle Verarbeitungsschritte finden ausschließlich lokal statt.</p>
+
+  <h3>a) Kamerazugriff (Berechtigung: `Permission.camera`)</h3>
+  <p>
+    <strong>Zweck:</strong> Die App benötigt Zugriff auf die Kamera, um Ihre Bewegungen in Echtzeit zu analysieren. Dies ist die Kernfunktion der App.
+  </p>
+  <p>
+    <strong>Verarbeitung:</strong> Der Kamerastream wird live und direkt auf Ihrem Gerät verarbeitet. Ein Machine-Learning-Modell (MoveNet) erkennt Körperpunkte (Gelenke) aus den Videobildern.
+  </p>
+  <p>
+    <strong>Wichtig:</strong> Es werden zu keinem Zeitpunkt Bilder oder Videos aufgezeichnet, gespeichert oder an externe Server übertragen. Die Verarbeitung erfolgt flüchtig im Arbeitsspeicher des Geräts und nur für die Dauer der Analyse.
+  </p>
+
+  <h3>b) Speicherzugriff (Berechtigung: `Permission.storage`)</h3>
+  <p>
+    <strong>Zweck:</strong> Die App fordert die Berechtigung für den Speicherzugriff aus einem rein technischen Grund an.
+  </p>
+  <p>
+    <strong>Verarbeitung:</strong> Um das für die Bewegungsanalyse notwendige Machine-Learning-Modell (eine <code>.tflite</code>-Datei) ausführen zu können, muss es aus dem App-Paket in ein temporäres Verzeichnis auf Ihrem Gerät kopiert werden. Dies ist eine technische Anforderung des verwendeten Frameworks (TensorFlow Lite).
+  </p>
+  <p>
+    <strong>Wichtig:</strong> Die App schreibt oder liest keine persönlichen Dateien von Ihrem Speicher. Der Zugriff beschränkt sich auf das Management dieser einen Modelldatei im app-eigenen, temporären Verzeichnis. Es werden keine Analyseergebnisse, Fotos oder andere Benutzerdaten gespeichert.
+  </p>
+
+  <h2>4. Eingesetzte Technologien</h2>
+  <ul>
+    <li>
+      <strong>TensorFlow Lite (On-Device KI):</strong> Zur Ausführung des MoveNet-Modells für die Skeletterkennung. Die gesamte Analyse findet lokal auf Ihrem Gerät statt. Es findet keine Kommunikation mit Servern von Google oder anderen Anbietern statt.
+    </li>
+    <li>
+      <strong>permission_handler (Flutter Plugin):</strong> Dieses Plugin wird verwendet, um die oben genannten Berechtigungen für Kamera und Speicher standardkonform unter Android und iOS abzufragen. Das Plugin selbst sammelt keine Daten.
+    </li>
+  </ul>
+
+  <h2>5. Ihre Rechte als Nutzer</h2>
+  <p>
+    Die Datenschutz-Grundverordnung (DSGVO) gewährt Ihnen umfassende Rechte wie das Recht auf Auskunft, Berichtigung, Löschung und Übertragbarkeit Ihrer personenbezogenen Daten.
+  </p>
+  <p>
+    Da diese App, wie oben dargelegt, keinerlei personenbezogene Daten speichert oder verarbeitet, die eine Identifizierung Ihrer Person ermöglichen würden, sind diese Rechte hier nicht im klassischen Sinne anwendbar. Eine Anfrage zur Löschung von Daten wäre gegenstandslos, da keine Daten zum Löschen vorhanden sind.
+  </p>
+
+  <h2>6. Änderungen dieser Datenschutzerklärung</h2>
+  <p>
+    Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z. B. bei der Einführung neuer Funktionen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
+  </p>
+
+  <h2>7. Kontakt bei Fragen</h2>
+  <p>Wenn Sie Fragen zum Datenschutz in Bezug auf die "Perfetto Bike Fit"-App haben, wenden Sie sich bitte an die unter Punkt 1 genannte E-Mail-Adresse.</p>
+</body>
+</html>
